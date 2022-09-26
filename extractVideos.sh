@@ -1,7 +1,7 @@
 #!/bin/bash
 function concatVideos (){
   fileName=$1
-  unzip ${fileName} video/*mp4
+  unzip ${fileName} "video/*mp4"
   ls -v ./video/segments/|awk '{print "file \047video/segments/" $1 "\047"}' >index.txt;
   ffmpeg -f concat -i index.txt -c copy ${fileName%.*}.mp4
   rm index.txt
