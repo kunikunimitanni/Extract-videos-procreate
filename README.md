@@ -2,7 +2,7 @@
 A script to extract time-lapse video from procreate file.
 
 ## Usage
->. extractVideos.sh [file...]
+>bash extractVideos.sh [file...]
 
 If no file is specified, it will be executed for all procreate files in the directory.
 
